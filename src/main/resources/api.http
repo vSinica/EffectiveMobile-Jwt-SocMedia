@@ -1,0 +1,47 @@
+###
+POST http://localhost:8080/api/register
+Content-Type: application/json
+
+{
+    "password": "password2",
+    "username": "user2",
+    "email": "rther@aaa.ru"
+}
+
+###
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "password": "pass",
+  "username": "user"
+}
+
+###
+GET http://localhost:8080/api/posts/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjg3MTkzNzcwLCJleHAiOjE2ODcyMjk3NzB9.ekY4Tq0k4t0FSmqyagJSboQ3RfYt6yv5DIVwbiK6_v4
+
+### create post
+PUT http://localhost:8080/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjg3MTk4MTE1LCJleHAiOjE2ODcyMzQxMTV9.pjvB9KvgOVMuZqVOE9wyZ9jB9PzDJx7C9lDrMy7ixxg
+Content-Type: application/json
+
+{
+  "text": "UFYGHB",
+  "title": "TITLEOUHBKJ,"
+}
+
+### update post
+POST http://localhost:8080/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjg3MTk5ODkxLCJleHAiOjE2ODcyMzU4OTF9.VmbVB7Pjpq-ZM37Ca9RzL_vqXJC2CRkRGFrcGMFhr-c
+Content-Type: application/json
+
+{
+  "id": 2,
+  "text": "updatedtext",
+  "title": "updatedTitle"
+}
+
+###
+DELETE http://localhost:8080/api/posts/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiaWF0IjoxNjg3MTk5ODkxLCJleHAiOjE2ODcyMzU4OTF9.VmbVB7Pjpq-ZM37Ca9RzL_vqXJC2CRkRGFrcGMFhr-c

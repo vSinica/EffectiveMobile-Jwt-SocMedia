@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: effectivemobile
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  jpa:
+    open-in-view: false
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        #        jdbc:
+        #          batch_size: 100
+        query:
+          in_clause_parameter_padding: true
+        temp:
+          use_jdbc_metadata_defaults: false
+    generate-ddl: false
+  datasource:
+    name: effectivemobile
+    url: jdbc:postgresql://127.0.0.1:5432/${spring.datasource.name}
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    baseline-on-migrate: true
+    out-of-order: true
+    fail-on-missing-locations: false
+
